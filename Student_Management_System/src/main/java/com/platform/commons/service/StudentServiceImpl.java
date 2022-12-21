@@ -11,8 +11,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.commons.app.model.Course;
-import com.commons.app.model.Student;
 import com.platform.commons.DTO.CourseDTO;
 import com.platform.commons.DTO.StudentAddressDTO;
 import com.platform.commons.DTO.StudentCourse;
@@ -50,7 +48,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public StudentDTO registerStudent(StudentDTO studentDTO) throws StudentException, UserException {
 		
-		Students student = dtoToStudents(studentDTO);
+		Students student = dtoToStudent(studentDTO);
 		
 		student = studentRepo.save(student) ;		
 			

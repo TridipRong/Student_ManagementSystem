@@ -11,7 +11,7 @@ import com.platform.commons.modle.Courses;
 
 public interface CourseService {
 
-	public Courses addCourse(CourseDTO courseDTO) throws CourseException;
+	public CourseDTO addCourse(CourseDTO courseDTO) throws CourseException;
 	
 	public StudentCourse assignCourseToStudent(Integer studentId,Integer courseId) throws CourseException, StudentException;
 	
